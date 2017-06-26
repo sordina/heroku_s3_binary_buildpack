@@ -28,8 +28,8 @@ fi
 echo cached binary
 file $CACHE_DIR/$filename
 
-ln -s $CACHE_DIR/$filename /tmp/latest_heroku_binary
-echo linked binary
+cp $CACHE_DIR/$filename /tmp/latest_heroku_binary
+echo copied binary
 file /tmp/latest_heroku_binary
 
 chmod 755 /tmp/latest_heroku_binary
