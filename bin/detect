@@ -1,0 +1,11 @@
+#!/bin/bash
+
+# Are you sure you're ready to rock and roll?
+
+if [ -f $1/heroku_s3_binary_location ]
+then
+  echo "heroku_s3_binary_framework"
+  exit 0
+else
+  exit 1
+fi

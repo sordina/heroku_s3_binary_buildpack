@@ -1,0 +1,8 @@
+#!/bin/bash
+
+cat << EOF
+---
+addons: []
+default_process_types:
+  web: $BUILD_DIR/latest_heroku_binary
+EOF

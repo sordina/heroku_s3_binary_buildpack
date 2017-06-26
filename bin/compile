@@ -1,0 +1,23 @@
+#!/bin/bash
+
+# bin/compile BUILD_DIR CACHE_DIR ENV_DIR
+
+BUILD_DIR=$1
+CACHE_DIR=$2
+ENV_DIR=$3
+
+location=$(cat $BUILD_DIR/heroku_s3_binary_location)
+
+filename=$(basename $location)
+
+if [ -f $CACHE_DIR/$filename ]
+then
+	echo "using cached artifact"
+else
+	echo "downloading artifact"
+	wget $location -O $CACHE_DIR/$filename
+fi
+
+ln -s $CACHE_DIR/$filename $BUILD_DIR/latest_heroku_binary
+
+chmod 755 $BUILD_DIR/latest_heroku_binary
