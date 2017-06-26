@@ -4,5 +4,5 @@ cat << EOF
 ---
 addons: []
 default_process_types:
-  web: $BUILD_DIR/latest_heroku_binary
+  web: /tmp/latest_heroku_binary
 EOF
