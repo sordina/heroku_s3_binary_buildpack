@@ -6,7 +6,7 @@ BUILD_DIR=$1
 CACHE_DIR=$2
 ENV_DIR=$3
 
-location=$(cat $BUILD_DIR/latest_heroku_binary )
+location=$(cat $BUILD_DIR/heroku_binary_location )
 
 filename=$(basename $location)
 

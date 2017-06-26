@@ -4,7 +4,7 @@
 
 BUILD_DIR=$1
 
-if [ -f $BUILD_DIR/latest_heroku_binary ]
+if [ -f $BUILD_DIR/heroku_binary_location ]
 then
   echo "heroku_s3_binary_framework"
   exit 0
