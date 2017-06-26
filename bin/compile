@@ -21,7 +21,7 @@ then
 	echo "using cached artifact"
 else
 	echo "downloading artifact"
-	wget $location -O $CACHE_DIR/$filename
+	curl $location > $CACHE_DIR/$filename
 fi
 
 ln -s $CACHE_DIR/$filename $BUILD_DIR/latest_heroku_binary
