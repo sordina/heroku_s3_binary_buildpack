@@ -16,6 +16,7 @@ filename=$(basename $location)
 
 echo "Got Basename: $filename"
 
+mkdir -p $CACHE_DIR
 if [ -f $CACHE_DIR/$filename ]
 then
 	echo "using cached artifact"
