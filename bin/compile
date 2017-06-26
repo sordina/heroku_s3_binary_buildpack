@@ -8,7 +8,11 @@ ENV_DIR=$3
 
 location=$(cat $BUILD_DIR/heroku_binary_location )
 
+echo "Got Location: $location"
+
 filename=$(basename $location)
+
+echo "Got Basename: $filename"
 
 if [ -f $CACHE_DIR/$filename ]
 then
