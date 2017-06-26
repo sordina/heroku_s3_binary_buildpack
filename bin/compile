@@ -25,6 +25,13 @@ else
 	curl $location > $CACHE_DIR/$filename
 fi
 
+echo cached binary
+file $CACHE_DIR/$filename
+
 ln -s $CACHE_DIR/$filename /tmp/latest_heroku_binary
+echo linked binary
+file /tmp/latest_heroku_binary
 
 chmod 755 /tmp/latest_heroku_binary
+echo weaponised binary
+ls -l /tmp/latest_heroku_binary
