@@ -4,5 +4,5 @@ cat << EOF
 ---
 addons: []
 default_process_types:
-  web: /tmp/latest_heroku_binary
+  web: /vendor/latest_heroku_binary
 EOF
