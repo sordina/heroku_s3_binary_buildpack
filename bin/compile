@@ -25,6 +25,6 @@ else
 	curl $location > $CACHE_DIR/$filename
 fi
 
-ln -s $CACHE_DIR/$filename $BUILD_DIR/latest_heroku_binary
+ln -s $CACHE_DIR/$filename /tmp/latest_heroku_binary
 
-chmod 755 $BUILD_DIR/latest_heroku_binary
+chmod 755 /tmp/latest_heroku_binary
