@@ -28,11 +28,11 @@ fi
 echo cached binary
 file $CACHE_DIR/$filename
 
-mkdir -p /app/vendor/heroku_binaries
-cp $CACHE_DIR/$filename /app/vendor/heroku_binaries/latest_heroku_binary
+mkdir -p $BUILD_DIR/vendor/heroku_binaries
+cp $CACHE_DIR/$filename $BUILD_DIR/vendor/heroku_binaries/latest_heroku_binary
 echo copied binary
-file /app/vendor/heroku_binaries/latest_heroku_binary
+file $BUILD_DIR/vendor/heroku_binaries/latest_heroku_binary
 
-chmod 755 /app/vendor/heroku_binaries/latest_heroku_binary
+chmod 755 $BUILD_DIR/vendor/heroku_binaries/latest_heroku_binary
 echo weaponised binary
-ls -l /app/vendor/heroku_binaries/latest_heroku_binary
+ls -l $BUILD_DIR/vendor/heroku_binaries/latest_heroku_binary
